@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: my-node-app
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+    branch: main
+    region: oregon  # or frankfurt
+    autoDeploy: true
